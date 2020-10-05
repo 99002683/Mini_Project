@@ -1,5 +1,5 @@
 all: all.out
-all.out : student.o getQualification.o studentdb.o student_test.o studentdb-test.o
+all.out: student.o getQualification.o studentdb.o student_test.o studentdb-test.o
 	g++ $^ -o $@ -lgtest -lgtest_main -lpthread
 studentdb-test.o: studentdb-test.cpp student.h getQualification.h studentdb.h 
 	g++ $< -c
