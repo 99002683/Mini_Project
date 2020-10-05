@@ -2,9 +2,9 @@ name: Valgrind
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -19,4 +19,4 @@ jobs:
         sudo apt-get -y install valgrind
         sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
     - name: valgrindcheck1  
-      run: valgrind ./all.out
+      run: valgrind ./Campus_Recruitment/all.out
