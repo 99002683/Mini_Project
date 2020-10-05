@@ -20,4 +20,4 @@ jobs:
     - name: make test
       run: |
         make test -C Campus_Recruitment/
-        valgrind ./Campus_Recruitment/all.out
+        valgrind ./Campus_Recruitment/build/all.out
