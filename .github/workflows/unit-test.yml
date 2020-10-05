@@ -1,10 +1,10 @@
-name: Unit testing
+name: Gtest
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install Cunit
-      run: sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
-    - name: make test
-      run:  make test -C Campus_Recruitment/
+    - name: gtest-permission
+      run: chmod a+x ./3_Implementation/all.out 
+    - name: gtest
+      run: ./Campus_Recruitment/all.out 
